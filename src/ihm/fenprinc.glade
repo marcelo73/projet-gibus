@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<glade-interface>
+  <!-- interface-requires gtk+ 2.6 -->
+  <!-- interface-naming-policy toplevel-contextual -->
+  <widget class="GtkWindow" id="windowPrinc">
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">Festivals rock inter-&#xE9;coles du Gibus</property>
+    <property name="window_position">center</property>
+    <signal name="destroy_event" handler="on_windowPrinc_destroy_event"/>
+    <signal name="delete_event" handler="on_windowPrinc_delete_event"/>
+    <child>
+      <widget class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="border_width">5</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <widget class="GtkMenuBar" id="menubar">
+            <property name="visible">True</property>
+            <property name="border_width">3</property>
+            <child>
+              <widget class="GtkMenuItem" id="menu_base">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Base</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_init">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Initialiser</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_init_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separatormenuitem1">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_quitter">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Quitter</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_quitter_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="menu_festival">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Festivals</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu2">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_enregVille">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Enregistrer villes</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_enregVille_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_creerFestival">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Creer Festival</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_creerFestival_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_programmerFestival">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Programmer Festival</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_programmerFestival_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkSeparatorMenuItem" id="separatormenuitem2">
+                        <property name="visible">True</property>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_consultFestival">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Consulter festival</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_consultFestival_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_consultProg">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Consulter programme</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_consultProg_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+            <child>
+              <widget class="GtkMenuItem" id="menu_groupe">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Groupes</property>
+                <property name="use_underline">True</property>
+                <child>
+                  <widget class="GtkMenu" id="menu3">
+                    <property name="visible">True</property>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_inscrireGroupe">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Inscrire Groupes</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_inscrireGroupe_activate"/>
+                      </widget>
+                    </child>
+                    <child>
+                      <widget class="GtkMenuItem" id="menuitem_consulterGroupe">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Consulter Groupes</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_menuitem_consulterGroupe_activate"/>
+                      </widget>
+                    </child>
+                  </widget>
+                </child>
+              </widget>
+            </child>
+          </widget>
+          <packing>
+            <property name="expand">False</property>
+            <property name="padding">2</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkLabel" id="label1">
+            <property name="visible">True</property>
+            <property name="label" translatable="yes">Bienvenue dans l'application </property>
+            <property name="justify">center</property>
+            <property name="width_chars">50</property>
+            <property name="max_width_chars">110</property>
+          </widget>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <widget class="GtkImage" id="image1">
+            <property name="visible">True</property>
+            <property name="pixbuf">gibus.jpg</property>
+          </widget>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </widget>
+    </child>
+  </widget>
+</glade-interface>
